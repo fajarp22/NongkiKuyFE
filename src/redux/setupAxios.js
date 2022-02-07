@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 export default function setupAxios(axios, store) {
   axios.interceptors.request.use(

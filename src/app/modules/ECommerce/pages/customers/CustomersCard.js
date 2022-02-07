@@ -21,7 +21,7 @@ export function CustomersCard() {
 
   return (
     <Card>
-      <CardHeader title="Data Nasabah">
+      <CardHeader title="Data Kedai">
         <CardHeaderToolbar>
           <button
             type="button"

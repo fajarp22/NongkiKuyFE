@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React from 'react';
 import { Modal, Button, Table } from 'react-bootstrap';

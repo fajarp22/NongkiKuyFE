@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useState, useEffect } from 'react';
 import {
@@ -178,27 +178,27 @@ const Ringkasan = function(props) {
         <CardBody>
           <Row>
             <Col md="6">
-              <h4 className="text-primary">Nasabah</h4>
+              <h4 className="text-primary">Kedai</h4>
               <Table bordered>
                 <tbody>
                   <tr>
                     <td>
-                      <strong>Nama</strong>
+                      <strong>Nama Kedai</strong>
                     </td>
                     <td>{customer.nama_nasabah}</td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Identitas</strong>
+                      <strong>Range Harga</strong>
                     </td>
-                    <td>
+                    {/* <td>
                       {customer.identitasKtp} (KTP) / {customer.identitasSim} (SIM) /{' '}
                       {customer.identitasNpwp} (NPWP)
-                    </td>
+                    </td> */}
                   </tr>
                   <tr>
                     <td>
-                      <strong>Tempat, Tanggal Lahir</strong>
+                      <strong>Lokasi</strong>
                     </td>
                     <td>
                       {customer.tempat_lahir},{' '}
@@ -207,7 +207,7 @@ const Ringkasan = function(props) {
                   </tr>
                   <tr>
                     <td>
-                      <strong>No. HP Aktif</strong>
+                      <strong>No Telephone Kedai</strong>
                     </td>
                     <td>{customer.nomor_hp}</td>
                   </tr>
@@ -215,32 +215,32 @@ const Ringkasan = function(props) {
               </Table>
             </Col>
             <Col md="6">
-              <h4 className="text-primary">Jaminan</h4>
+              <h4 className="text-primary">Detail Kedai</h4>
               <Table bordered>
                 <tbody>
                   <tr>
                     <td>
-                      <strong>Jenis Barang</strong>
+                      <strong>Alamat Lengkap</strong>
                     </td>
                     <td>{dataJaminan.parentCategory}</td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Kategori Barang</strong>
+                      <strong>Kategori Kedai</strong>
                     </td>
                     <td>{dataJaminan.category}</td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Nama Barang</strong>
+                      <strong>Fasilitas Kedai</strong>
                     </td>
                     <td>{dataJaminan.itemName}</td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Nilai Taksiran</strong>
+                      <strong>Daya Tampung Maksimal</strong>
                     </td>
-                    <td>Rp. {thousandSeparator(dataJaminan.serviceOriginValue)}</td>
+                    {/* <td>Rp. {thousandSeparator(dataJaminan.serviceOriginValue)}</td> */}
                   </tr>
                 </tbody>
               </Table>
@@ -253,38 +253,38 @@ const Ringkasan = function(props) {
                 <tbody>
                   <tr>
                     <td>
-                      <strong>Nilai Jaminan</strong>
+                      <strong>Harga Menu Termahal</strong>
                     </td>
                     <td>Rp. {thousandSeparator(dataJaminan.serviceLimit)}</td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Nilai Pencairan</strong>
+                      <strong>Harga Menu Termurah</strong>
                     </td>
                     <td>Rp. {thousandSeparator(dataJaminan.serviceReceived)}</td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Biaya Administrasi</strong>
+                      <strong>Signature Dish</strong>
                     </td>
                     <td>{dataJaminan.administrationFee}</td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Biaya Asuransi</strong>
+                      <strong>Biaya Service</strong>
                     </td>
                     <td>{dataJaminan.insuranceFee}</td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Jumlah Diterima</strong>
+                      <strong>Biaya Ppn</strong>
                     </td>
                     <td>Rp. {thousandSeparator(dataJaminan.serviceReceived)}</td>
                   </tr>
                 </tbody>
               </Table>
             </Col>
-            <Col md="6">
+            {/* <Col md="6">
               <h4 className="text-primary">Hasil Pengecekan</h4>
               <Table bordered>
                 <tbody>
@@ -308,8 +308,8 @@ const Ringkasan = function(props) {
                   </tr>
                 </tbody>
               </Table>
-            </Col>
-            <Col md="6">
+            </Col> */}
+            {/* <Col md="6">
               <h4 className="text-primary">Migrasi Dari Sistem Lama?</h4>
               <ButtonGroup toggle>
                 {radios.map((radio, idx) => (
@@ -328,7 +328,7 @@ const Ringkasan = function(props) {
                   </ToggleButton>
                 ))}
               </ButtonGroup>
-            </Col>
+            </Col> */}
           </Row>
         </CardBody>
         <CardFooter>

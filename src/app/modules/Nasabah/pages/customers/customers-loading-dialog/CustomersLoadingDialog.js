@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useEffect } from 'react';
 import { shallowEqual, useSelector } from 'react-redux';

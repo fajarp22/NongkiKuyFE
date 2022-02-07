@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { Suspense } from 'react';
 import { Switch } from 'react-router-dom';

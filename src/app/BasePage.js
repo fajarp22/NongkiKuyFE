@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { Suspense, lazy } from 'react';
 import { Redirect, Switch, Route } from 'react-router-dom';

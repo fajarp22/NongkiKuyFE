@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useMemo } from 'react';
 import { useCustomersUIContext } from '../CustomersUIContext';

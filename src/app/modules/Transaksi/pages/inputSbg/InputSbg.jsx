@@ -103,17 +103,17 @@ export function InputSbgPage() {
           <Row className="text-center">
             <Col lg="4">
               <Alert variant={step === 0 ? 'primary' : 'secondary'}>
-                <strong>1. Input Data Nasabah</strong>
+                <strong>1. Input Data Kedai</strong>
               </Alert>
             </Col>
             <Col lg="4">
               <Alert variant={step === 1 ? 'primary' : 'secondary'}>
-                <strong>2. Input Data Jaminan</strong>
+                <strong>2. Input Detail Kedai</strong>
               </Alert>
             </Col>
             <Col lg="4">
               <Alert variant={step === 2 ? 'primary' : 'secondary'}>
-                <strong>3. Ringkasan Jaminan</strong>
+                <strong>3. Ringkasan</strong>
               </Alert>
             </Col>
           </Row>

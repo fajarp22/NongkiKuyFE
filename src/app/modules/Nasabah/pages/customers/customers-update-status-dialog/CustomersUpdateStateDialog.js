@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { Modal } from 'react-bootstrap';

@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useState, useEffect } from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
@@ -18,7 +18,7 @@ export function CustomerShowDialogHeader({ id }) {
   useEffect(() => {
     let _title = id ? '' : 'Show Customer';
     if (customerForEdit && id) {
-      _title = `Data nasabah ${customerForEdit.nama_nasabah}`;
+      _title = `Data Kedai ${customerForEdit.nama_nasabah}`;
     }
 
     setTitle(_title);

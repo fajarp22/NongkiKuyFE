@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 export default function safeRequest(url, options) {
   return fetch(url, options)

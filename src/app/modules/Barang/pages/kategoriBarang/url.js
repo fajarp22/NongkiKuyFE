@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import qs from 'querystring';
 import { isEmpty } from 'lodash';

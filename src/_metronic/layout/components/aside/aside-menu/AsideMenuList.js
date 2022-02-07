@@ -119,7 +119,7 @@ export function AsideMenuList({ layoutProps }) {
                       <i className="menu-bullet menu-bullet-dot">
                         <span />
                       </i>
-                      <span className="menu-text">Minuman</span>
+                      <span className="menu-text">Input Data Kedai</span>
                     </NavLink>
                   </li>
                 ) : (

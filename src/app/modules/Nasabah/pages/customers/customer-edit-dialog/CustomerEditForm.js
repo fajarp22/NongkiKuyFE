@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';

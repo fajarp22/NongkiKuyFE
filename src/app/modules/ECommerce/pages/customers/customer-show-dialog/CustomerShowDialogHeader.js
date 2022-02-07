@@ -16,7 +16,7 @@ export function CustomerShowDialogHeader({ id }) {
   useEffect(() => {
     let _title = id ? '' : 'Show Customer';
     if (customerForEdit && id) {
-      _title = `Data nasabah ${customerForEdit.nama_nasabah}`;
+      _title = `Data Kedai ${customerForEdit.nama_nasabah}`;
     }
 
     setTitle(_title);

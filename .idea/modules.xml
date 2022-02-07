@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/rumahgadai-frontend.iml" filepath="$PROJECT_DIR$/.idea/rumahgadai-frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nongkikuy-frontend.iml" filepath="$PROJECT_DIR$/.idea/nongkikuy-frontend.iml" />
     </modules>
   </component>
 </project>

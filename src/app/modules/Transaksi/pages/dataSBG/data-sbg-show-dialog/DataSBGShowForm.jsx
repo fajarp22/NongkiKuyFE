@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useState } from 'react';
 import { Modal, Table, Card, Row, Col, Image, Button, Badge } from 'react-bootstrap';

@@ -4,7 +4,7 @@
 // 	return <div>CekHargaPage</div>;
 // }
 
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardBody } from '../../../../../_metronic/_partials/controls/Card';

@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import * as requestFromServer from './customersCrud';
 import { customersSlice, callTypes } from './customersSlice';

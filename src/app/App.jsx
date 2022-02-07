@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 /**
  * Entry application component used to compose providers and render Routes.

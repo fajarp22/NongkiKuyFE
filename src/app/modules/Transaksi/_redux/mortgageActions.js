@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import * as requestFromServer from './mortgageCrud';
 import { mortgageSlice, callTypes } from './mortgageSlice';

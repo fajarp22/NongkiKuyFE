@@ -1,11 +1,11 @@
 {
-	"name": "rumahgadai",
+	"name": " ",
 	"version": "7.2.8",
 	"lockfileVersion": 2,
 	"requires": true,
 	"packages": {
 		"": {
-			"name": "rumahgadai",
+			"name": "nongkikuy",
 			"version": "7.2.8",
 			"dependencies": {
 				"@date-io/date-fns": "2.6.1",

@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useMemo } from 'react';
 import {
@@ -23,7 +23,7 @@ export function CustomersCard() {
 
   return (
     <Card>
-      <CardHeader title="Data Nasabah">
+      <CardHeader title="Data Kedai">
         <CardHeaderToolbar>
           <button
             type="button"

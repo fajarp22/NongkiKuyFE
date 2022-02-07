@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import MockAdapter from 'axios-mock-adapter';
 import mockAuth from '../../app/modules/Auth/__mocks__/mockAuth';

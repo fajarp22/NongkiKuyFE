@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { Formik } from 'formik';

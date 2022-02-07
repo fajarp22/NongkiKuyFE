@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useMemo } from 'react';
 import { Formik } from 'formik';

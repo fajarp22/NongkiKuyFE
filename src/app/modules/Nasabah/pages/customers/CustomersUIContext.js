@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { isEqual, isFunction } from 'lodash';

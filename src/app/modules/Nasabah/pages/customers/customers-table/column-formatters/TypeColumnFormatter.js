@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React from 'react';
 import { CustomerTypeCssClasses, CustomerTypeTitles } from '../../CustomersUIHelpers';

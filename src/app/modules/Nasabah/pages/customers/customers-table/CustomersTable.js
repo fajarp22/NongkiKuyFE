@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 import React, { useEffect, useMemo } from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';

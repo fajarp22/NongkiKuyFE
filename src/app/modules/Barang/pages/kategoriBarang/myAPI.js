@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import { HOSTNAME, APIHOSTNAME } from './constants';
 import URL from './url';

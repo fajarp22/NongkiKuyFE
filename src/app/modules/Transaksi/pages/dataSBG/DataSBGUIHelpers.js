@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 export const defaultSorted = [{ dataField: 'id', order: 'asc' }];
 export const sizePerPageList = [

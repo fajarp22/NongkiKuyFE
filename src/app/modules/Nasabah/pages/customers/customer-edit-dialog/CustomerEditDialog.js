@@ -1,4 +1,4 @@
-// contact me 👉🏻 https://linktr.ee/rifqiahmad.f
+// contact me  
 
 import React, { useEffect, useMemo } from 'react';
 import { Modal } from 'react-bootstrap';

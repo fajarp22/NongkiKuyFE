@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import * as requestFromServer from './branchCrud';
 import { branchSlice, callTypes } from './branchSlice';

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 import React from 'react';
 import SVG from 'react-inlinesvg';

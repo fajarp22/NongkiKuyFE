@@ -1,4 +1,4 @@
-// contact me 👉🏻 https://linktr.ee/rifqiahmad.f
+// contact me  
 
 export function getInitLayoutConfig() {
   return {

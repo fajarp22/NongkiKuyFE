@@ -1,4 +1,4 @@
-// contact me @ https://linktr.ee/rifqiahmad.f
+//  
 
 export const CustomerStatusCssClasses = ['danger', 'success', 'info', ''];
 export const CustomerStatusTitles = ['Suspended', 'Active', 'Pending', ''];

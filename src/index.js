@@ -1,4 +1,4 @@
-// 👉🏻 https://linktr.ee/rifqiahmad.f
+//  
 
 /**
  * Create React App entry point. This and `public/index.html` files can not be
