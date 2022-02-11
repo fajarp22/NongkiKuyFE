@@ -1,4 +1,4 @@
-//  
+//
 
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { isEqual, isFunction } from 'lodash';
@@ -32,7 +32,10 @@ export function DataBarangUIProvider({ dataBarangUIEvents, children }) {
   const initDataBarang = {
     itemName: '',
     itemPrice: '',
-    itemCategoryId: ''
+    itemCategoryId: '6',
+    deskripsiHidangan: '',
+    kategoriHidangan: '',
+    urlHidangan: ''
   };
 
   const value = {

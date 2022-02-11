@@ -1,4 +1,4 @@
-//  
+//
 
 import axios from 'axios';
 
@@ -25,4 +25,9 @@ export const getSelectedItemCategory = id => {
 
 export const generateItemCode = id => {
   return axios.get(baseUrl + '/item/generatecode/' + id).then(response => response.data.data[0]);
+};
+
+export const getAllRestaurants = async () => {
+  const response = await axios.get(baseUrl + '/restaurant/showallrestaurants');
+  return response.data;
 };

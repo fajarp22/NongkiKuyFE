@@ -1,4 +1,4 @@
-// 
+//
 
 import React, { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
@@ -13,18 +13,23 @@ import {
 
 const DataBarangEditSchema = Yup.object().shape({
   itemName: Yup.string().required('Perlu diisi.'),
-  itemPrice: Yup.number().required('Perlu diisi.')
+  itemPrice: Yup.number().required('Perlu diisi.'),
+  deskripsiHidangan: Yup.string().required('Perlu diisi.'),
+  kategoriHidangan: Yup.string().required('Perlu diisi.'),
+  urlHidangan: Yup.string().required('Perlu diisi.')
 });
 
 export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLoading, onHide }) {
   const [parentCategory, setParentCategory] = useState([]);
   const [category, setCategory] = useState([]);
   const [selectedParentCategory, setSelectedParentCategory] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(6);
   const [itemCode, setItemCode] = useState('');
   const [itemPrice, setItemPrice] = useState(0);
   const [isCalled, setIsCalled] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
+  const [restaurantList, setRestaurantList] = useState([]);
+  const [restaurantId, setRestaurantId] = useState('');
 
   useEffect(() => {
     if (dataBarang.id !== undefined) {
@@ -39,6 +44,7 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
     async function fetchAPI() {
       if (!unmounted) {
         itemCategory.getParentItemCategory().then(res => setParentCategory(res));
+        itemCategory.getAllRestaurants().then(res => setRestaurantList(res));
       }
     }
     fetchAPI();
@@ -92,25 +98,34 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
         initialValues={dataBarang}
         validationSchema={DataBarangEditSchema}
         onSubmit={values => {
+          console.log(values);
           if (!isCalled) {
             setIsCalled(true);
             if (dataBarang.id === undefined) {
-              itemCategory.generateItemCode(selectedCategory).then(res => {
-                // const itemPrice = values.itemPrice;
-                saveDataBarang({
-                  ...values,
-                  itemPrice,
-                  itemCode: res,
-                  modifiedBy: user._id
-                });
+              // itemCategory.generateItemCode(selectedCategory).then(res => {
+              //   // const itemPrice = values.itemPrice;
+              //   saveDataBarang({
+              //     ...values,
+              //     itemPrice,
+              //     // itemCode: res,
+              //     modifiedBy: user._id
+              //   });
+              // });
+              saveDataBarang({
+                ...values,
+                itemPrice,
+                // itemCode: res,
+                modifiedBy: user._id,
+                restaurantId
               });
             } else {
               // const itemPrice = values.itemPrice;
               saveDataBarang({
                 ...values,
                 itemPrice,
-                itemCode: itemCode,
-                modifiedBy: user._id
+                // itemCode: itemCode,
+                modifiedBy: user._id,
+                restaurantId
               });
             }
           }
@@ -129,24 +144,24 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                     <Select
                       disabled={dataBarang.id === undefined ? false : true}
                       name="null"
-                      label="Kategori Induk Barang"
-                      value={selectedParentCategory}
+                      label="Nama Restoran"
+                      value={restaurantId}
                       autoComplete="off"
                       onChange={e => {
-                        setSelectedParentCategory(e.target.value);
+                        setRestaurantId(e.target.value);
                         setItemCode('');
                       }}>
-                      <option value="">Pilih Kategori Induk Barang</option>
-                      {parentCategory.map(item => {
+                      <option value="">Pilih Nama Restoran</option>
+                      {restaurantList.map(item => {
                         return (
-                          <option value={item.id} key={item.id}>
-                            {item.categoryName}
+                          <option value={item._id} key={item._id}>
+                            {item.nama_nasabah}
                           </option>
                         );
                       })}
                     </Select>
                   </div>
-                  <div className="col-lg-4">
+                  {/* <div className="col-lg-4">
                     <Select
                       disabled={
                         selectedParentCategory === ''
@@ -188,7 +203,7 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                         setFieldValue(e.target.name, e.target.value);
                       }}
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="form-group row">
                   <div className="col-lg-4">
@@ -216,8 +231,8 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                       }}
                     />
                   </div>
-                  <div className='col-lg-4'>
-                  <Field
+                  <div className="col-lg-4">
+                    <Field
                       name="kategoriHidangan"
                       component={Input}
                       placeholder="Kategori Hidangan"
@@ -226,8 +241,8 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                       autoComplete="off"
                     />
                   </div>
-                  <div className='col-lg-4'>
-                  <Field
+                  <div className="col-lg-4">
+                    <Field
                       name="deskripsiHidangan"
                       component={Input}
                       placeholder="Deskripsi Hidangan"
@@ -236,8 +251,8 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                       autoComplete="off"
                     />
                   </div>
-                  <div className='col-lg-4'>
-                  <Field
+                  <div className="col-lg-4">
+                    <Field
                       name="urlHidangan"
                       component={Input}
                       placeholder="Gambar Hidangan"
