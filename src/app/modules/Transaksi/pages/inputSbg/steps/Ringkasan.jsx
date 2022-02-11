@@ -242,6 +242,11 @@ const Ringkasan = function(props) {
                     </td>
                     {/* <td>Rp. {thousandSeparator(dataJaminan.serviceOriginValue)}</td> */}
                   </tr>
+                  <tr>
+                  <td>
+                      <strong>Deskripsi Kedai</strong>
+                   </td>
+                  </tr>
                 </tbody>
               </Table>
             </Col>

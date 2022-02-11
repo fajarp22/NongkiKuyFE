@@ -195,8 +195,8 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                     <Field
                       name="itemName"
                       component={Input}
-                      placeholder="Nama Barang"
-                      label="Nama Barang"
+                      placeholder="Nama Hidangan"
+                      label="Nama Hidangan"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
@@ -205,8 +205,8 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                     <Field
                       name="itemPrice"
                       component={Input}
-                      placeholder="Nilai Taksiran"
-                      label="Nilai Taksiran"
+                      placeholder="Harga Hidangan"
+                      label="Harga Hidangan"
                       withFeedbackLabel={false}
                       autoComplete="off"
                       value={thousandSeparator(itemPrice)}
@@ -214,6 +214,36 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                         setItemPrice(rmThousandSeparator(e.target.value));
                         setFieldValue(e.target.name, e.target.value);
                       }}
+                    />
+                  </div>
+                  <div className='col-lg-4'>
+                  <Field
+                      name="kategoriHidangan"
+                      component={Input}
+                      placeholder="Kategori Hidangan"
+                      label="Kategori Hidangan"
+                      withFeedbackLabel={false}
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div className='col-lg-4'>
+                  <Field
+                      name="deskripsiHidangan"
+                      component={Input}
+                      placeholder="Deskripsi Hidangan"
+                      label="Deskripsi Hidangan"
+                      withFeedbackLabel={false}
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div className='col-lg-4'>
+                  <Field
+                      name="urlHidangan"
+                      component={Input}
+                      placeholder="Gambar Hidangan"
+                      label="Gambar Hidangan"
+                      withFeedbackLabel={false}
+                      autoComplete="off"
                     />
                   </div>
                 </div>

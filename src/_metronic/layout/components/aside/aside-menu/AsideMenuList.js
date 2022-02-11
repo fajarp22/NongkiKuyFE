@@ -173,13 +173,13 @@ export function AsideMenuList({ layoutProps }) {
             className={`menu-item menu-item-submenu ${getMenuItemActive('/barang', true)}`}
             aria-haspopup="true"
             data-menu-toggle="hover">
-            {/* <NavLink className="menu-link menu-toggle" to="/barang">
+            <NavLink className="menu-link menu-toggle" to="/barang">
               <span className="svg-icon menu-icon">
                 <SVG src={toAbsoluteUrl('/media/svg/icons/Shopping/Bag2.svg')} />
               </span>
               <span className="menu-text">Barang</span>
               <i className="menu-arrow" />
-            </NavLink> */}
+            </NavLink>
             <div className="menu-submenu">
               <i className="menu-arrow" />
               <ul className="menu-subnav">

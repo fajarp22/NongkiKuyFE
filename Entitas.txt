@@ -1,0 +1,53 @@
+kedai
+	nama kedai
+	alamat kedai
+	kontak kedai
+	range harga 
+		Termahal
+		Termurah
+	Signature dish
+	kategori kedai
+	fasilitas kedai
+	daya tampung maksimal
+	deskripsi kedai
+	konsep/tema kedai
+Menu
+	Nama Menu
+	Harga Menu
+	Kategori Menu
+	deskripsi Menu
+	Gambar Menu
+
+<div className="form-group row">
+                  <div className="col-lg-4">
+                    <Field
+                      name="kategoriHidangan"
+                      component={Input}
+                      placeholder="Kategori Hidangan"
+                      label="Kategori Hidangan"
+                      withFeedbackLabel={false}
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div className="form-group row">
+                  <div className="col-lg-4">
+                    <Field
+                      name="deskripsiHidangan"
+                      component={Input}
+                      placeholder="Deskripsi Hidangan"
+                      label="Deskripsi Hidangan"
+                      withFeedbackLabel={false}
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div className="form-group row">
+                  <div className="col-lg-4">
+                    <Field
+                      name="urlHidangan"
+                      component={Input}
+                      placeholder="Gambar Hidangan"
+                      label="Gambar Hidangan"
+                      withFeedbackLabel={false}
+                      autoComplete="off"
+                    />
+                  </div>
