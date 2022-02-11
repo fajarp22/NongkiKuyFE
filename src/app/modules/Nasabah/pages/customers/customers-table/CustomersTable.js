@@ -46,7 +46,7 @@ export function CustomersTable() {
   const columns = [
     {
       dataField: 'createdAt',
-      text: 'Tanggal dibuat',
+      text: 'Tanggal Bergabung',
       sort: true,
       sortCaret: sortCaret
     },
@@ -58,28 +58,8 @@ export function CustomersTable() {
     //   headerSortingClasses,
     // },
     {
-      dataField: 'identitasKtp',
-      text: 'Nomor KTP',
-      sort: true,
-      sortCaret: sortCaret,
-      headerSortingClasses,
-      formatter: (cell, row) => {
-        return cell ?? '-';
-      }
-    },
-    {
-      dataField: 'identitasSim',
-      text: 'Nomor SIM',
-      sort: true,
-      sortCaret: sortCaret,
-      headerSortingClasses,
-      formatter: (cell, row) => {
-        return cell ?? '-';
-      }
-    },
-    {
-      dataField: 'identitasNpwp',
-      text: 'Nomor NPWP',
+      dataField: 'provinsi_sekarang',
+      text: 'Id Kedai',
       sort: true,
       sortCaret: sortCaret,
       headerSortingClasses,
@@ -89,14 +69,41 @@ export function CustomersTable() {
     },
     {
       dataField: 'nama_nasabah',
-      text: 'Nama Nasabah',
+      text: 'Nama Kedai',
+      sort: true,
+      sortCaret: sortCaret,
+      headerSortingClasses,
+      formatter: (cell, row) => {
+        return cell ?? '-';
+      }
+    },
+    // {
+    //   dataField: 'identitasNpwp',
+    //   text: 'Alamat Kedai',
+    //   sort: true,
+    //   sortCaret: sortCaret,
+    //   headerSortingClasses,
+    //   formatter: (cell, row) => {
+    //     return cell ?? '-';
+    //   }
+    // },
+    {
+      dataField: 'nomor_hp_darurat',
+      text: 'Kategori Kedai',
       sort: true,
       sortCaret: sortCaret,
       headerSortingClasses
     },
     {
-      dataField: 'nomor_hp',
-      text: 'No. HP',
+      dataField: 'alamat_sekarang',
+      text: 'Rating Kedai',
+      sort: true,
+      sortCaret: sortCaret,
+      headerSortingClasses
+    },
+    {
+      dataField: 'identitasKtp',
+      text: 'Nomor Telephone Kedai',
       sort: true,
       sortCaret: sortCaret,
       headerSortingClasses

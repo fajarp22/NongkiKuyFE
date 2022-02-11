@@ -215,19 +215,19 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                 </div>
               )}
               <Form className="form form-label-right">
-                <h4 className="text-primary">Identitas Personal</h4>
+                <h4 className="text-primary">Info Detail Kedai</h4>
                 <div className="form-group row">
                   <div className="col-lg-4">
                     <Field
                       name="nama_nasabah"
                       component={Input}
-                      placeholder="Nama Nasabah"
-                      label="Nama Nasabah"
+                      placeholder="Nama Kedai"
+                      label="Nama Kedai"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
                   </div>
-                  {/* <div className="col-lg-4">
+                  <div className="col-lg-4">
                     <Select name="tipe_identitas" label="Tipe Identitas">
                       <option value="0">Pilih Identitas</option>
                       <option value="KTP">KTP</option>
@@ -244,20 +244,20 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
-                  </div> */}
+                  </div>
                   <div className="col-lg-4">
                     <Field
                       name="tempat_lahir"
                       component={Input}
-                      placeholder="Tempat Lahir"
-                      label="Tempat Lahir"
+                      placeholder="Lokasi Kedai"
+                      label="Lokasi Kedai"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
                   </div>
                   <div className="col-lg-4">
                     <>
-                      <label>Tanggal Lahir</label>
+                      <label>Tanggal Berdiri</label>
                       <DatePicker
                         name="tanggalLahir"
                         style={{ width: '100%' }}
@@ -319,8 +319,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Field
                       name="identitasKtp"
                       component={Input}
-                      placeholder="Nomor KTP"
-                      label="Nomor KTP"
+                      placeholder="Nomor Telephone"
+                      label="Nomor Telephone"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
@@ -329,8 +329,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Field
                       name="identitasSim"
                       component={Input}
-                      placeholder="Nomor SIM"
-                      label="Nomor SIM"
+                      placeholder="Jam Operasional"
+                      label="Jam Operasional"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
@@ -339,8 +339,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Field
                       name="identitasNpwp"
                       component={Input}
-                      placeholder="Nomor NPWP"
-                      label="Nomor NPWP"
+                      placeholder="Website"
+                      label="Website"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
@@ -351,8 +351,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Field
                       name="nomor_hp"
                       component={Input}
-                      placeholder="Nomor HP"
-                      label="Nomor HP"
+                      placeholder="Email"
+                      label="Email"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
@@ -361,8 +361,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Field
                       name="nomor_telepon_rumah"
                       component={Input}
-                      placeholder="Telepon Rumah"
-                      label="Telepon Rumah"
+                      placeholder="Pembayaran"
+                      label="Pembayaran"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
@@ -371,23 +371,22 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Field
                       name="nama_ibu_kandung"
                       component={Input}
-                      placeholder="Nama Ibu Kandung"
-                      label="Nama Ibu Kandung"
+                      placeholder="Kapasitas Maksimal"
+                      label="Kapasitas Maksimal"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
                   </div>
                 </div>
 
-                <br />
-                <h4 className="text-primary">Keadaan Darurat</h4>
+                {/* <h4 className="text-primary">Keadaan Darurat</h4> */}
                 <div className="form-group row">
                   <div className="col-lg-4">
                     <Field
                       name="nama_darurat"
                       component={Input}
-                      placeholder="Nama yang Dapat Dihubungi"
-                      label="Nama yang Dapat Dihubungi"
+                      placeholder="Fasilitas"
+                      label="Fasilitas"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
@@ -396,8 +395,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Field
                       name="nomor_hp_darurat"
                       component={Input}
-                      placeholder="Nomor HP Darurat"
-                      label="Nomor HP Darurat"
+                      placeholder="Kategori"
+                      label="Kategori"
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
@@ -411,9 +410,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     </Select>
                   </div>
                 </div>
-
                 <br />
-                <h4 className="text-primary">Alamat KTP</h4>
+                <h4 className="text-primary">Alamat Kedai</h4>
                 <div className="form-group row">
                   <div className="col-lg-4">
                     <Field
@@ -517,7 +515,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                   </div>
                 </div>
                 <br />
-                <h4 className="text-primary">Alamat Sekarang</h4>
+                {/* <h4 className="text-primary">Alamat Sekarang</h4> */}
                 <div className="form-group row">
                   <div className="col-lg-4">
                     <Field

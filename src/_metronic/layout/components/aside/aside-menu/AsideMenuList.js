@@ -149,7 +149,7 @@ export function AsideMenuList({ layoutProps }) {
         ) : (
           ''
         )}
-        {/*end::1 Level*/}
+        {/* end::1 Level */}
 
         {/* begin:: 1 Level */}
         {accessCustomer.showMenu ? (

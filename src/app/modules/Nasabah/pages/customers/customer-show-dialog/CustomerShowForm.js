@@ -73,44 +73,64 @@ export function CustomerShowForm({ customer, onHide }) {
         <table className="table table-bordered">
           <tbody>
             <tr>
-              <th scope="row">Nama Nasabah</th>
+              <th scope="row">Nama Kedai</th>
               <td>{customer.nama_nasabah}</td>
             </tr>
             <tr>
-              <th scope="row">Identitas</th>
+              <th scope="row">Alamat</th>
               <td>
-                {customer.identitasKtp} (KTP) / {customer.identitasSim}(SIM) /{' '}
-                {customer.identitasNpwp} (NPWP)
+              PROV. {selectedProvinceKTP.province}, {selectedRegencyKTP.regency}, KEC.{' '}
+                {selectedDistrictKTP.district}, KEL. {selectedVillageKTP.village}
               </td>
             </tr>
             <tr>
-              <th scope="row">Tempat / Tanggal Lahir</th>
+              <th scope="row">Tahun Berdiri</th>
               <td>
-                {customer.tempat_lahir} /{' '}
+                {/* {customer.tanggal_lahir} */}
                 {moment.tz(customer.tanggal_lahir, 'Asia/Jakarta').format('LL')}
               </td>
             </tr>
-            <tr>
-              <th scope="row">Nomor Telepon Aktif</th>
+            {/* <tr>
+              <th scope="row">Nomor Telephone Kedai</th>
               <td>{customer.nomor_telepon_rumah}</td>
-            </tr>
+            </tr> */}
             <tr>
-              <th scope="row">Nomor Handphone Aktif</th>
+              <th scope="row">Nomor Telephone</th>
               <td>
-                {customer.nomor_hp}{' '}
+                {customer.identitasKtp}{' '}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href={`https://wa.me/${normalisasiNomorHP(customer.nomor_hp)}`}>
+                  href={`https://wa.me/${normalisasiNomorHP(customer.identitasKtp)}`}>
                   Hubungi via Whatsapp
                 </a>
               </td>
             </tr>
             <tr>
-              <th scope="row">Ibu Kandung</th>
+              <th scope="row">Jam Operasional</th>
+              <td>{customer.identitasSim}</td>
+            </tr>
+            <tr>
+              <th scope="row">Website</th>
+              <td>{customer.identitasNpwp}</td>
+            </tr>
+            <tr>
+              <th scope="row">Email</th>
+              <td>{customer.nomor_hp}</td>
+            </tr>
+            <tr>
+              <th scope="row">Pembayaran</th>
+              <td>{customer.nomor_telepon_rumah}</td>
+            </tr>
+            <tr>
+              <th scope="row">Kapasitas Maksimal</th>
               <td>{customer.nama_ibu_kandung}</td>
             </tr>
             <tr>
+              <th scope="row">Fasilitas</th>
+              <td>{customer.nama_darurat}</td>
+            </tr>
+            {/* <tr>
               <th scope="row">Nama darurat / Status Hubungan</th>
               <td>
                 {customer.nama_darurat} / {customer.status_hubungan}
@@ -127,8 +147,8 @@ export function CustomerShowForm({ customer, onHide }) {
                   Hubungi via Whatsapp
                 </a>
               </td>
-            </tr>
-            <tr>
+            </tr> */}
+            {/* <tr>
               <th scope="row" rowSpan="2">
                 Alamat Sesuai KTP
               </th>
@@ -154,7 +174,7 @@ export function CustomerShowForm({ customer, onHide }) {
             </tr>
             <tr>
               <td colSpan="2"></td>
-            </tr>
+            </tr> */}
             <tr>
               <th scope="row">Tanggal Dibuat</th>
               <td>{moment.tz(customer.createdAt, 'Asia/Jakarta').format('lll')}</td>
