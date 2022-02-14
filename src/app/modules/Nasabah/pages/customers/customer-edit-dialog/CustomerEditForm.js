@@ -227,15 +227,15 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       autoComplete="off"
                     />
                   </div>
-                  <div className="col-lg-4">
+                  {/* <div className="col-lg-4">
                     <Select name="tipe_identitas" label="Tipe Identitas">
                       <option value="0">Pilih Identitas</option>
                       <option value="KTP">KTP</option>
                       <option value="NPWP">NPWP</option>
                       <option value="SIM">SIM</option>
                     </Select>
-                  </div>
-                  <div className="col-lg-4">
+                  </div> */}
+                  {/* <div className="col-lg-4">
                     <Field
                       name="nomor_identitas"
                       component={Input}
@@ -244,7 +244,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       withFeedbackLabel={false}
                       autoComplete="off"
                     />
-                  </div>
+                  </div> */}
                   <div className="col-lg-4">
                     <Field
                       name="tempat_lahir"
@@ -402,11 +402,11 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     />
                   </div>
                   <div className="col-lg-4">
-                    <Select name="status_hubungan" label="Status Hubungan">
-                      <option value="0">Pilih Status Hubungan</option>
-                      <option value="ORANGTUA">Orangtua</option>
-                      <option value="SAUDARA KANDUNG">Saudara Kandung</option>
-                      <option value="SUAMI / ISTRI">Suami / Istri</option>
+                    <Select name="status_hubungan" label="Kategori Kedai">
+                      <option value="0">Kategori Kedai</option>
+                      <option value="ORANGTUA">Bar And Resto</option>
+                      <option value="SAUDARA KANDUNG">Cafe</option>
+                      <option value="SUAMI / ISTRI">Resto</option>
                     </Select>
                   </div>
                 </div>

@@ -21,6 +21,7 @@ export function Dashboard() {
     // https://docs.google.com/spreadsheets/d/e/2PACX-1vS8xnGjZHPKpD4vD1KmKwy0nu869LybNjAL-sUJCDiyGXALnk44b_lLER4MnBvLHr5xtLxLnz3KTFRw/pubhtml?widget=true&amp;headers=false
 
     <>
+    {/* <h4>Ini nanti Dashboard</h4> */}
       {/* <iframe
         title="FULL REKAP LH RGJB (new1)"
         style={{ width: '100%', height: '30%' }}
@@ -30,7 +31,11 @@ export function Dashboard() {
         title="Dashboard News"
         style={{ width: '100%', height: '100%', border: 'none' }}
         src="https://docs.google.com/document/d/e/2PACX-1vTJdriV1cyvTSab-VKb_HwjUZHt7I6CQ7sc0gr0mqGA39vCbsfJTUmWSS3vYyfcaoRcYyyRmYHstmKs/pub?embedded=true"></iframe> */}
-      {layoutProps.demo === 'demo1' && <Demo1Dashboard />}
+      <iframe
+        title="Dashboard News"
+        style={{ width: '100%', height: '100%', border: 'none' }}
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKGRm3ekM97HrCiwC7vEF3UqbdfOdUElxBr7_B-_8WmMvru3qMV9Nij_Yk_isZHikbA5P1dEg2Lqb3/pubhtml?widget=true"></iframe>
+      {/* {layoutProps.demo === 'demo1' && <Demo1Dashboard />} */}
       {layoutProps.demo === "demo2" && <Demo2Dashboard />}
       {layoutProps.demo === "demo3" && <Demo3Dashboard />}
       {layoutProps.demo === "demo4" && <Demo4Dashboard />}
