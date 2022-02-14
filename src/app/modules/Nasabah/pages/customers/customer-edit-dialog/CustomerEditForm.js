@@ -1,4 +1,4 @@
-//  
+//
 
 import React, { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
@@ -404,9 +404,9 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                   <div className="col-lg-4">
                     <Select name="status_hubungan" label="Kategori Kedai">
                       <option value="0">Kategori Kedai</option>
-                      <option value="ORANGTUA">Bar And Resto</option>
-                      <option value="SAUDARA KANDUNG">Cafe</option>
-                      <option value="SUAMI / ISTRI">Resto</option>
+                      <option value="Bar And Resto">Bar And Resto</option>
+                      <option value="Cafe">Cafe</option>
+                      <option value="Resto">Resto</option>
                     </Select>
                   </div>
                 </div>

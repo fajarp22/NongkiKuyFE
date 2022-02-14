@@ -1,4 +1,4 @@
-//  
+//
 
 import React, { useEffect, useMemo } from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
@@ -104,6 +104,13 @@ export function CustomersTable() {
     {
       dataField: 'identitasKtp',
       text: 'Nomor Telephone Kedai',
+      sort: true,
+      sortCaret: sortCaret,
+      headerSortingClasses
+    },
+    {
+      dataField: 'status_hubungan',
+      text: 'Kategori Kedai',
       sort: true,
       sortCaret: sortCaret,
       headerSortingClasses
