@@ -241,6 +241,8 @@ export function DataBarangEditForm({ user, saveDataBarang, dataBarang, actionsLo
                       autoComplete="off"
                     />
                   </div>
+                  </div>
+                  <div className="form-group row">
                   <div className="col-lg-4">
                     <Field
                       name="deskripsiHidangan"

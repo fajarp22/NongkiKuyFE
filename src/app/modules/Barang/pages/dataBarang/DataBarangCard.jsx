@@ -22,13 +22,13 @@ export function DataBarangCard() {
 
   return (
     <Card>
-      <CardHeader title="Data Barang">
+      <CardHeader title="Daftar Menu">
         <CardHeaderToolbar>
           <button
             type="button"
             className="btn btn-primary btn-sm mr-3"
             onClick={dataBarangUIProps.newDataBarangButtonClick}>
-            Tambah Barang
+            Tambah Menu
           </button>
         </CardHeaderToolbar>
       </CardHeader>

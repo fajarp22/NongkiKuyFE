@@ -61,7 +61,7 @@ export function DataBarangFilter({ listLoading }) {
         {({ values, handleSubmit, handleBlur, setFieldValue }) => (
           <form onSubmit={handleSubmit} className="form form-label-right">
             <div className="form-group row">
-              <div className="col-lg-2">
+              {/* <div className="col-lg-2">
                 <select
                   className="form-control"
                   name="status"
@@ -84,7 +84,7 @@ export function DataBarangFilter({ listLoading }) {
                 <small className="form-text text-muted">
                   <b>Filter</b> berdasarkan Kategori
                 </small>
-              </div>
+              </div> */}
               <div className="col-lg-2">
                 <input
                   type="text"

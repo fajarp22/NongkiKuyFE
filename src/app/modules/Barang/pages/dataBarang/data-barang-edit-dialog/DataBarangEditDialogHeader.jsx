@@ -16,7 +16,7 @@ export function DataBarangEditDialogHeader({ id }) {
 
   const [title, setTitle] = useState('');
   useEffect(() => {
-    let _title = id ? '' : 'Data Barang Baru';
+    let _title = id ? '' : 'Daftar Menu Baru';
     if (dataBarangForEdit && id) {
       _title = `Edit Data Barang ${dataBarangForEdit.itemCode}`;
     }

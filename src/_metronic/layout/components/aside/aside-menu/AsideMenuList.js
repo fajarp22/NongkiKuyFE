@@ -37,12 +37,12 @@ export function AsideMenuList({ layoutProps }) {
       <ul className={`menu-nav ${layoutProps.ulClasses}`}>
         {/*begin::1 Level*/}
         <li className={`menu-item ${getMenuItemActive('/dashboard', false)}`} aria-haspopup="true">
-          <NavLink className="menu-link" to="/dashboard">
+          {/* <NavLink className="menu-link" to="/dashboard">
             <span className="svg-icon menu-icon">
               <SVG src={toAbsoluteUrl('/media/svg/icons/Design/Layers.svg')} />
             </span>
             <span className="menu-text">Dashboard</span>
-          </NavLink>
+          </NavLink> */}
         </li>
         {/*end::1 Level*/}
 
@@ -81,13 +81,13 @@ export function AsideMenuList({ layoutProps }) {
             className={`menu-item menu-item-submenu ${getMenuItemActive('/transaksi', true)}`}
             aria-haspopup="true"
             data-menu-toggle="hover">
-            <NavLink className="menu-link menu-toggle" to="/transaksi">
+            {/* <NavLink className="menu-link menu-toggle" to="/transaksi">
               <span className="svg-icon menu-icon">
                 <SVG src={toAbsoluteUrl('/media/svg/icons/Shopping/Dollar.svg')} />
               </span>
-              <span className="menu-text">Daftar Menu</span>
+              <span className="menu-text">Form Input</span>
               <i className="menu-arrow" />
-            </NavLink>
+            </NavLink> */}
             <div className="menu-submenu">
               <i className="menu-arrow" />
               <ul className="menu-subnav">
@@ -98,7 +98,7 @@ export function AsideMenuList({ layoutProps }) {
                 </li>
 
                 {/*begin::2 Level*/}
-                <li
+                {/* <li
                   className={`menu-item ${getMenuItemActive('/transaksi/cek-harga')}`}
                   aria-haspopup="true">
                   <NavLink className="menu-link" to="/transaksi/cek-harga">
@@ -107,11 +107,11 @@ export function AsideMenuList({ layoutProps }) {
                     </i>
                     <span className="menu-text">Makanan</span>
                   </NavLink>
-                </li>
+                </li> */}
                 {/*end::2 Level*/}
 
                 {/*begin::2 Level*/}
-                {accessTransaction.create ? (
+                {/* {accessTransaction.create ? (
                   <li
                     className={`menu-item ${getMenuItemActive('/transaksi/input-sbg')}`}
                     aria-haspopup="true">
@@ -124,7 +124,7 @@ export function AsideMenuList({ layoutProps }) {
                   </li>
                 ) : (
                   ''
-                )}
+                )} */}
                 {/*end::2 Level*/}
 
                 {/*begin::2 Level*/}
@@ -177,7 +177,7 @@ export function AsideMenuList({ layoutProps }) {
               <span className="svg-icon menu-icon">
                 <SVG src={toAbsoluteUrl('/media/svg/icons/Shopping/Bag2.svg')} />
               </span>
-              <span className="menu-text">Barang</span>
+              <span className="menu-text">Daftar Menu</span>
               <i className="menu-arrow" />
             </NavLink>
             <div className="menu-submenu">
@@ -185,7 +185,7 @@ export function AsideMenuList({ layoutProps }) {
               <ul className="menu-subnav">
                 <li className="menu-item menu-item-parent" aria-haspopup="true">
                   <span className="menu-link">
-                    <span className="menu-text">Barang</span>
+                    <span className="menu-text">Menu</span>
                   </span>
                 </li>
                 {/*begin::2 Level*/}
@@ -193,12 +193,12 @@ export function AsideMenuList({ layoutProps }) {
                   <li
                     className={`menu-item ${getMenuItemActive('/barang/kategori-barang')}`}
                     aria-haspopup="true">
-                    <NavLink className="menu-link" to="/barang/kategori-barang">
+                    {/* <NavLink className="menu-link" to="/barang/kategori-barang">
                       <i className="menu-bullet menu-bullet-dot">
                         <span />
                       </i>
                       <span className="menu-text">Kategori Barang</span>
-                    </NavLink>
+                    </NavLink> */}
                   </li>
                 ) : (
                   ''
@@ -214,7 +214,7 @@ export function AsideMenuList({ layoutProps }) {
                       <i className="menu-bullet menu-bullet-dot">
                         <span />
                       </i>
-                      <span className="menu-text">Data Barang</span>
+                      <span className="menu-text">Menu</span>
                     </NavLink>
                   </li>
                 ) : (
