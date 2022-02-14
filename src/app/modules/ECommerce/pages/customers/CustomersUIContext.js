@@ -45,11 +45,11 @@ export function CustomersUIProvider({ customersUIEvents, children }) {
     kota_ktp: '',
     kecamatan_ktp: '',
     kelurahan_ktp: '',
-    alamat_sekarang: '',
-    provinsi_sekarang: '',
-    kota_sekarang: '',
-    kecamatan_sekarang: '',
-    kelurahan_sekarang: ''
+    alamat_sekarang: 'X',
+    provinsi_sekarang: 'X',
+    kota_sekarang: 'X',
+    kecamatan_sekarang: 'X',
+    kelurahan_sekarang: 'X'
   };
 
   const value = {

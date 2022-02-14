@@ -23,7 +23,7 @@ const CustomerEditSchema = Yup.object().shape({
   nama_darurat: Yup.string().required('Perlu diisi.'),
   nomor_hp_darurat: Yup.string().required('Perlu diisi.'),
   alamat_ktp: Yup.string().required('Perlu diisi.'),
-  alamat_sekarang: Yup.string().required('Perlu diisi.')
+  alamat_sekarang: Yup.string()
 });
 
 export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading, onHide }) {
@@ -43,9 +43,9 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
   const [selectedVillageKTP, setSelectedVillageKTP] = useState('');
 
   const [selectedProvinceSekarang, setSelectedProvinceSekarang] = useState('');
-  const [selectedRegencySekarang, setSelectedRegencySekarang] = useState('');
-  const [selectedDistrictSekarang, setSelectedDistrictSekarang] = useState('');
-  const [selectedVillageSekarang, setSelectedVillageSekarang] = useState('');
+  const [selectedRegencySekarang, setSelectedRegencySekarang] = useState('X');
+  const [selectedDistrictSekarang, setSelectedDistrictSekarang] = useState('X');
+  const [selectedVillageSekarang, setSelectedVillageSekarang] = useState('X');
 
   const [alamatKTP, setAlamatKTP] = useState('');
   const [alamatSekarang, setAlamatSekarang] = useState('');
@@ -424,6 +424,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       autoComplete="off"
                       onChange={e => {
                         setAlamatKTP(e.target.value);
+                        // setAlamatSekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
                       }}
                     />
@@ -436,6 +437,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       autoComplete="off"
                       onChange={e => {
                         setSelectedProvinceKTP(e.target.value);
+                        // setSelectedProvinceSekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
                       }}>
                       <option value="">Pilih Provinsi</option>
@@ -457,6 +459,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       autoComplete="off"
                       onChange={e => {
                         setSelectedRegencyKTP(e.target.value);
+                        setSelectedRegencySekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
                       }}>
                       <option value="">Pilih Kota/Kabupaten</option>
@@ -480,6 +483,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       autoComplete="off"
                       onChange={e => {
                         setSelectedDistrictKTP(e.target.value);
+                        setSelectedDistrictSekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
                       }}>
                       <option value="">Pilih Kecamatan</option>
@@ -501,6 +505,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       autoComplete="off"
                       onChange={e => {
                         setSelectedVillageKTP(e.target.value);
+                        setSelectedVillageSekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
                       }}>
                       <option value="">Pilih Kelurahan</option>
@@ -515,14 +520,14 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                   </div>
                 </div>
                 <br />
-                {/* <h4 className="text-primary">Alamat Sekarang</h4> */}
+                <h4 className="text-primary">Informasi Tambahan</h4>
                 <div className="form-group row">
                   <div className="col-lg-4">
                     <Field
                       name="alamat_sekarang"
                       component={Input}
-                      placeholder="Alamat Sekarang"
-                      label="Alamat"
+                      placeholder="Rating Kedai"
+                      label="Rating Kedai"
                       withFeedbackLabel={false}
                       value={alamatSekarang}
                       autoComplete="off"
@@ -533,26 +538,21 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     />
                   </div>
                   <div className="col-lg-4">
-                    <Select
+                    <Field
                       name="provinsi_sekarang"
-                      label="Provinsi Sekarang"
+                      component={Input}
+                      placeholder="ID Kedai"
+                      label="ID Kedai"
+                      withFeedbackLabel={false}
                       value={selectedProvinceSekarang}
                       autoComplete="off"
                       onChange={e => {
                         setSelectedProvinceSekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
-                      }}>
-                      <option value="0">Pilih Provinsi</option>
-                      {provincesSekarang.map(item => {
-                        return (
-                          <option value={item.id} key={item.id}>
-                            {item.province}
-                          </option>
-                        );
-                      })}
-                    </Select>
+                      }}
+                    />
                   </div>
-                  <div className="col-lg-4">
+                  {/* <div className="col-lg-4">
                     <Select
                       disabled={selectedProvinceSekarang === '' ? true : false}
                       name="kota_sekarang"
@@ -572,10 +572,10 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                         );
                       })}
                     </Select>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="form-group row">
-                  <div className="col-lg-4">
+                  {/* <div className="col-lg-4">
                     <Select
                       disabled={selectedRegencySekarang === '' ? true : false}
                       name="kecamatan_sekarang"
@@ -595,8 +595,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                         );
                       })}
                     </Select>
-                  </div>
-                  <div className="col-lg-4">
+                  </div> */}
+                  {/* <div className="col-lg-4">
                     <Select
                       disabled={selectedDistrictSekarang === '' ? true : false}
                       name="kelurahan_sekarang"
@@ -616,8 +616,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                         );
                       })}
                     </Select>
-                  </div>
-                  <div className="col-lg-4">
+                  </div> */}
+                  {/* <div className="col-lg-4">
                     <label>Salin Alamat KTP</label>
                     <button
                       type="button"
@@ -654,7 +654,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       className="btn btn-success btn-elevate form-control">
                       Salin
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </Form>
             </Modal.Body>

@@ -1,4 +1,4 @@
-//  
+//
 
 export const CustomerStatusCssClasses = ['danger', 'success', 'info', ''];
 export const CustomerStatusTitles = ['Suspended', 'Active', 'Pending', ''];
@@ -12,8 +12,8 @@ export const sizePerPageList = [
 ];
 export const initialFilter = {
   filter: '',
-  sortOrder: 'desc', // asc||desc
-  sortField: 'createdAt',
+  sortOrder: 'asc', // asc||desc
+  sortField: 'provinsi_sekarang',
   pageNumber: 1,
   pageSize: 10
 };
