@@ -23,20 +23,20 @@ export function DataBarangShowForm({ dataBarang, onHide }) {
         <table className="table table-bordered">
           <tbody>
             <tr>
-              <th scope="row">Kode Barang</th>
+              <th scope="row">Kode Menu</th>
               <td>{dataBarang.itemCode}</td>
             </tr>
             <tr>
-              <th scope="row">Nama Barang</th>
+              <th scope="row">Nama Menu</th>
               <td>{dataBarang.itemName}</td>
             </tr>
             <tr>
-              <th scope="row">Nilai Taksiran</th>
+              <th scope="row">Harga Menu</th>
               <td>{thousandSeparator(dataBarang.itemPrice)}</td>
             </tr>
             <tr>
               <th scope="row">Kategori</th>
-              <td>{kategori}</td>
+              <td>{dataBarang.kategoriHidangan}</td>
             </tr>
             <tr>
               <td colSpan="2"></td>

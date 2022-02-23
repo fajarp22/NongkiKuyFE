@@ -87,13 +87,13 @@ export function CustomersTable() {
     //     return cell ?? '-';
     //   }
     // },
-    {
-      dataField: 'nomor_hp_darurat',
-      text: 'Kategori Kedai',
-      sort: true,
-      sortCaret: sortCaret,
-      headerSortingClasses
-    },
+    // {
+    //   dataField: 'nomor_hp_darurat',
+    //   text: 'Kategori Kedai',
+    //   sort: true,
+    //   sortCaret: sortCaret,
+    //   headerSortingClasses
+    // },
     {
       dataField: 'alamat_sekarang',
       text: 'Rating Kedai',

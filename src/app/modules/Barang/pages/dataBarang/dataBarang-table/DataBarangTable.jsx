@@ -49,8 +49,8 @@ export function DataBarangTable() {
 
   const columns = [
     {
-      dataField: 'itemCode',
-      text: 'Kode Barang',
+      dataField: 'restaurant.nama_nasabah',
+      text: 'Nama Kedai',
       sort: true,
       sortCaret: sortCaret,
       style: {
@@ -59,7 +59,7 @@ export function DataBarangTable() {
     },
     {
       dataField: 'itemName',
-      text: 'Nama Barang',
+      text: 'Nama Menu',
       sort: true,
       sortCaret: sortCaret,
       headerSortingClasses,
@@ -69,8 +69,8 @@ export function DataBarangTable() {
       }
     },
     {
-      dataField: 'itemcategory.categoryName',
-      text: 'Kategori Barang',
+      dataField: 'kategoriHidangan',
+      text: 'Kategori',
       sort: true,
       sortCaret: sortCaret,
       headerSortingClasses,
@@ -81,7 +81,7 @@ export function DataBarangTable() {
     },
     {
       dataField: 'itemPrice',
-      text: 'Nilai Taksiran',
+      text: 'Harga Menu',
       sort: true,
       sortCaret: sortCaret,
       headerSortingClasses,

@@ -417,7 +417,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Field
                       name="alamat_ktp"
                       component={Input}
-                      placeholder="Alamat KTP"
+                      placeholder="Alamat Kedai"
                       label="Alamat"
                       withFeedbackLabel={false}
                       value={alamatKTP}
@@ -432,7 +432,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                   <div className="col-lg-4">
                     <Select
                       name="provinsi_ktp"
-                      label="Provinsi KTP"
+                      label="Provinsi"
                       value={selectedProvinceKTP}
                       autoComplete="off"
                       onChange={e => {
@@ -454,7 +454,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Select
                       disabled={selectedProvinceKTP === '' ? true : false}
                       name="kota_ktp"
-                      label="Kota KTP"
+                      label="Kota"
                       value={selectedRegencyKTP}
                       autoComplete="off"
                       onChange={e => {
@@ -478,7 +478,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Select
                       disabled={selectedRegencyKTP === '' ? true : false}
                       name="kecamatan_ktp"
-                      label="Kecamatan KTP"
+                      label="Kecamatan"
                       value={selectedDistrictKTP}
                       autoComplete="off"
                       onChange={e => {
@@ -500,7 +500,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                     <Select
                       disabled={selectedDistrictKTP === '' ? true : false}
                       name="kelurahan_ktp"
-                      label="Kelurahan KTP"
+                      label="Kelurahan"
                       value={selectedVillageKTP}
                       autoComplete="off"
                       onChange={e => {
