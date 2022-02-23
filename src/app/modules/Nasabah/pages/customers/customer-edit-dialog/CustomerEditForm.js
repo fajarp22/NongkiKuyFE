@@ -43,8 +43,8 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
   const [selectedVillageKTP, setSelectedVillageKTP] = useState('');
 
   const [selectedProvinceSekarang, setSelectedProvinceSekarang] = useState('');
-  const [selectedRegencySekarang, setSelectedRegencySekarang] = useState('X');
-  const [selectedDistrictSekarang, setSelectedDistrictSekarang] = useState('X');
+  const [selectedRegencySekarang, setSelectedRegencySekarang] = useState('');
+  const [selectedDistrictSekarang, setSelectedDistrictSekarang] = useState('');
   const [selectedVillageSekarang, setSelectedVillageSekarang] = useState('X');
 
   const [alamatKTP, setAlamatKTP] = useState('');
@@ -459,7 +459,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       autoComplete="off"
                       onChange={e => {
                         setSelectedRegencyKTP(e.target.value);
-                        setSelectedRegencySekarang(e.target.value);
+                        // setSelectedRegencySekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
                       }}>
                       <option value="">Pilih Kota/Kabupaten</option>
@@ -483,7 +483,7 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                       autoComplete="off"
                       onChange={e => {
                         setSelectedDistrictKTP(e.target.value);
-                        setSelectedDistrictSekarang(e.target.value);
+                        // setSelectedDistrictSekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
                       }}>
                       <option value="">Pilih Kecamatan</option>
@@ -575,48 +575,36 @@ export function CustomerEditForm({ user, saveCustomer, customer, actionsLoading,
                   </div> */}
                 </div>
                 <div className="form-group row">
-                  {/* <div className="col-lg-4">
-                    <Select
-                      disabled={selectedRegencySekarang === '' ? true : false}
+                  <div className="col-lg-4">
+                    <Field
+                      name="kota_sekarang"
+                      component={Input}
+                      placeholder="Latitude"
+                      label="Latitude"
+                      withFeedbackLabel={false}
+                      value={selectedRegencySekarang}
+                      autoComplete="off"
+                      onChange={e => {
+                        setSelectedRegencySekarang(e.target.value);
+                        setFieldValue(e.target.name, e.target.value);
+                      }}
+                    />
+                  </div>
+                  <div className="col-lg-4">
+                    <Field
                       name="kecamatan_sekarang"
-                      label="Kecamatan Sekarang"
+                      component={Input}
+                      placeholder="Longitude"
+                      label="Longitude"
+                      withFeedbackLabel={false}
                       value={selectedDistrictSekarang}
                       autoComplete="off"
                       onChange={e => {
                         setSelectedDistrictSekarang(e.target.value);
                         setFieldValue(e.target.name, e.target.value);
-                      }}>
-                      <option value="0">Pilih Kecamatan</option>
-                      {districtsSekarang.map(item => {
-                        return (
-                          <option value={item.id} key={item.id}>
-                            {item.district}
-                          </option>
-                        );
-                      })}
-                    </Select>
-                  </div> */}
-                  {/* <div className="col-lg-4">
-                    <Select
-                      disabled={selectedDistrictSekarang === '' ? true : false}
-                      name="kelurahan_sekarang"
-                      label="Kelurahan Sekarang"
-                      value={selectedVillageSekarang}
-                      autoComplete="off"
-                      onChange={e => {
-                        setSelectedVillageSekarang(e.target.value);
-                        setFieldValue(e.target.name, e.target.value);
-                      }}>
-                      <option value="0">Pilih Kelurahan</option>
-                      {villagesSekarang.map(item => {
-                        return (
-                          <option value={item.id} key={item.id}>
-                            {item.village}
-                          </option>
-                        );
-                      })}
-                    </Select>
-                  </div> */}
+                      }}
+                    />
+                  </div>
                   {/* <div className="col-lg-4">
                     <label>Salin Alamat KTP</label>
                     <button
