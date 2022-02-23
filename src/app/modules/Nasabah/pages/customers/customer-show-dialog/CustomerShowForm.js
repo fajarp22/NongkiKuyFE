@@ -1,4 +1,4 @@
-//  
+//
 
 import React, { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
@@ -8,7 +8,6 @@ import * as location from '../../../../../_redux/locations/locationsCrud';
 
 export function CustomerShowForm({ customer, onHide }) {
   const nama_user = customer.modifiedBy ? customer.modifiedBy.nama_user : 'Harap Tunggu...';
-
   const [selectedProvinceKTP, setSelectedProvinceKTP] = useState({});
   const [selectedRegencyKTP, setSelectedRegencyKTP] = useState({});
   const [selectedDistrictKTP, setSelectedDistrictKTP] = useState({});
@@ -79,7 +78,7 @@ export function CustomerShowForm({ customer, onHide }) {
             <tr>
               <th scope="row">Alamat</th>
               <td>
-              PROV. {selectedProvinceKTP.province}, {selectedRegencyKTP.regency}, KEC.{' '}
+                PROV. {selectedProvinceKTP.province}, {selectedRegencyKTP.regency}, KEC.{' '}
                 {selectedDistrictKTP.district}, KEL. {selectedVillageKTP.village}
               </td>
             </tr>
@@ -194,6 +193,24 @@ export function CustomerShowForm({ customer, onHide }) {
               <th scope="row">Oleh</th>
               <td className="text-primary font-weight-bold">{nama_user}</td>
             </tr>
+          </tbody>
+        </table>
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Nama Menu</th>
+              <th>Harga</th>
+            </tr>
+          </thead>
+          <tbody>
+            {customer?.menu?.map((data, idx) => (
+              <tr key={idx}>
+                <td>{idx + 1}</td>
+                <td>{data.itemName}</td>
+                <td>{data.itemPrice}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </Modal.Body>
